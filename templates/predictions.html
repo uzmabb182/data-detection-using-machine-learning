@@ -1,0 +1,11 @@
+{% extends "base.html" %}
+{% set active_page = "predictions" %}
+{% block content %}
+
+<div style='margin-top: 30px; text-align: center;'>
+  <h1>Predictions</h1>
+  <div id='user-inputs'></div>  
+</div>
+<script src="{{url_for('static', filename='js/predictions.js')}}"></script>
+
+{% endblock %}

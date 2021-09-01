@@ -1,3 +1,0 @@
-SELECT * FROM public.sqf_2020_data;
-
-SELECT * FROM public.sqf_merged_data;
