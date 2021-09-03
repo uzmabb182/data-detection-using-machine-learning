@@ -1,5 +1,5 @@
 from flask import Flask, render_template, jsonify
-from data import column_names
+from data import reduced_column_names
 
 app = Flask(__name__)
 
@@ -10,19 +10,19 @@ def home():
     return render_template('home.html')
 
 
-@app.route('/about')
+@app.route('/Analysis')
 def about():
     return render_template('about.html')
 
 
-@app.route('/predictions')
+@app.route('/Supervised_Machine_Learning')
 def predictions():
     return render_template('predictions.html')
 
 
 @app.route('/api/feature_names')
 def feature_names():
-    return jsonify(column_names)
+    return jsonify(reduced_column_names)
 
 
 @app.errorhandler(404)

@@ -3,8 +3,54 @@
 {% block content %}
 
 <div style='margin-top: 30px; text-align: center;'>
-  <h1>Title of Final Project</h1>
-  <p class="lead"><i>Subtitle of Project</i></p>
+  <h1>Machine Learning - Final Project</h1>
+  <p class="lead"><i>By Mubashira Qari</i></p>
+</div>
+<div class="jumbotron bg-success" style="text-align: center">
+  <h1 class="text-light">STOP-QUESTION-AND-FRISK DATA PREDICTION</h1>
 </div>
 
+<div class="row">
+  <div class="col-md-12 justify-content-center text-center text-light">
+      <h2>The Data</h2>
+      <p>The data used to train for suspect's summon issued prediction algorithm is an open source, available on <a href="https://www1.nyc.gov/site/nypd/stats/reports-analysis/stopfrisk.page">NYPD-New York City Police Department</a>.</p>
+      <p>The datsets are used for educational purposes only. The outcome of the suspect's summon issued algorithm may not align with the outcome of the specific suspect.</p>
+  </div>
+</div>
+<div class="row">
+  <div class="col-md-12 justify-content-center border-success">
+      <h2 class="text-center text-light">The Data Description</h2>
+      <br>
+  </div>
+  <div class="col-md-3 justify-content-center">
+      <div class="card text-light border-success bg-dark mb-3 text-center" style="max-width: 20rem;">
+          <div class="card-body">
+              <h6 class="card-title">The 2017, 2018, and 2019 Stop, Question, & Frisk Datasets are merged for Training Data</h6>      
+          </div>
+      </div>
+  </div>
+  <div class="col-md-3 justify-content-center">
+      <div class="card text-light border-success bg-dark mb-3 text-center" style="max-width: 20rem;">
+          <div class="card-body">
+              <h6 class="card-title">EDA, Preprocessing, Binning, Numeric Conversion, Data Normalization is Performed for Training Data</h6>             
+          </div>
+      </div>
+  </div>
+  <div class="col-md-3 justify-content-center">
+      <div class="card text-light border-success bg-dark mb-3 text-center" style="max-width: 20rem;">
+          <div class="card-body">
+              <h6 class="card-title">The 2020 Stop, Question, & Frisk Dataset is Prepared for Testing Data</h6> 
+              <br>
+          </div>
+      </div>
+  </div>
+  <div class="col-md-3 justify-content-center">
+      <div class="card text-light border-success bg-dark mb-3 text-center" style="max-width: 20rem;">
+          <div class="card-body">
+              <h6 class="card-title">Data is Fitted to the Model for Prediction and accuracy score is calculated</h6>
+              <br>
+          </div>
+      </div>
+  </div>
+</div>
 {% endblock %}

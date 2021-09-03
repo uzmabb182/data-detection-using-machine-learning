@@ -1,13 +1,48 @@
 {% extends "base.html" %}
-{% set active_page = "predictions" %}
+{% set active_page = "Supervised_Machine_Learning" %}
 {% block content %}
 
+
+<div class="jumbotron bg-primary" style="text-align: center">
+  <h1 class="text-light">'Summon_Isssued_Flag' Prediction </h1>
+</div>
+
+
 <div style='margin-top: 30px; text-align: center;'>
-  <h1>Predictions</h1>
+  <h1>Top Twelve Feature Importances</h1>
+
   <div id='user-inputs'></div>
   <div style='text-align: center; justify-content: center; margin-top: 10px;'>
-    <button type="button" class="btn btn-primary" style='width:400px;' onclick='submit_button_pressed();'>SUBMIT</button>
+   
+    <h3>Select a Model to Fit for Accuracy Score</h3>
+
+    <button type="button" class="btn btn-primary" style='width:400px;' id="dropdownMenuButton" data-toggle="dropdown"
+      aria-haspopup="true" aria-expanded="false">Logestic
+      Regression Model</button>
+    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+      <a class="dropdown-item" href="#">Action</a>
+      <a class="dropdown-item" href="#">Another action</a>
+      <a class="dropdown-item" href="#">Something else here</a>
+      <a class="dropdown-item" href="#">Something else here</a>
+    </div>
+
+    <button type="button" class="btn btn-primary" style='width:400px;' id="dropdownMenuButton" data-toggle="dropdown"
+      aria-haspopup="true" aria-expanded="false">Random Forest
+      Classifier</button>
+    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+      <a class="dropdown-item" href="#">Action</a>
+      <a class="dropdown-item" href="#">Another action</a>
+      <a class="dropdown-item" href="#">Something else here</a>
+      <a class="dropdown-item" href="#">Something else here</a>
+      <a class="dropdown-item" href="#">Something else here</a>
+      <a class="dropdown-item" href="#">Something else here</a>
+    </div>
+
   </div>
+  <br><br>
+  <button type="button" class="btn btn-primary" style='width:400px;' onclick='submit_button_pressed();'>Make
+    Prediction</button>
+
 </div>
 <script src="{{url_for('static', filename='js/predictions.js')}}"></script>
 
