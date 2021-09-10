@@ -1,9 +1,11 @@
 from flask import Flask, render_template, jsonify, request
 from data import reduced_column_names
+from data import arrest_reduced_column_names
 import joblib
 import pandas as pd
 app = Flask(__name__)
 trained_machine_learning_model=joblib.load('static/data_processing/reduced_features_random_forest_updated.joblib')
+trained_machine_learning_model_1=joblib.load('static/data_processing/reduced_features_random_forest_arrest.joblib')
 
 @app.route('/')
 @app.route('/home')
@@ -11,14 +13,13 @@ def home():
     return render_template('home.html')
 
 
-@app.route('/Analysis')
-def about():
-    return render_template('about.html')
+@app.route('/analysis')
+def visual_analysis():
+    return render_template('analysis.html')
 
-
-@app.route('/Supervised_Machine_Learning')
+@app.route('/summon_predictions')
 def predictions():
-    return render_template('predictions.html')
+    return render_template('summon_predictions.html')
 
 
 @app.route('/api/generate_prediction', methods=['POST'])
@@ -45,6 +46,36 @@ def generate_prediction():
 @app.route('/api/feature_names')
 def feature_names():
     return jsonify(reduced_column_names)
+
+@app.route('/arrest_predictions')
+def predictions_arrest():
+    return render_template('arrest_predictions.html')
+
+
+@app.route('/api/generate_arrest_prediction', methods=['POST'])
+def generate_prediction_arrest():
+    user_inputs=request.json
+    predict_df=pd.DataFrame({
+    'SEARCHED_FLAG':[int(user_inputs['SEARCHED_FLAG'])],
+    'WEAPON_FOUND_FLAG':[int(user_inputs['WEAPON_FOUND_FLAG'])],
+    'SUSPECT_REPORTED_AGE':[int(user_inputs['SUSPECT_REPORTED_AGE'])],
+    'STOP_DURATION_MINUTES':[int(user_inputs['STOP_DURATION_MINUTES'])],
+    'MONTH':[int(user_inputs['MONTH'])],
+    'DAY':[int(user_inputs['DAY'])],
+    'OBSERVED_DURATION_MINUTES':[int(user_inputs['OBSERVED_DURATION_MINUTES'])],
+    'FRISKED_FLAG':[int(user_inputs['FRISKED_FLAG'])],
+    'YEAR':[int(user_inputs['YEAR'])],
+    'OFFICER_EXPLAINED_STOP_FLAG':[int(user_inputs['OFFICER_EXPLAINED_STOP_FLAG'])],
+    'OFFICER_IN_UNIFORM_FLAG':[float(user_inputs['OFFICER_IN_UNIFORM_FLAG'])],
+    'SUMMONS_ISSUED_FLAG':[float(user_inputs['SUMMONS_ISSUED_FLAG'])]
+    })
+    prediction_arrest=str(trained_machine_learning_model_1.predict(predict_df)[0])
+    return jsonify([prediction_arrest])
+
+
+@app.route('/api/arrest_feature_names')
+def feature_names_arrest():
+    return jsonify(arrest_reduced_column_names)
 
 
 @app.errorhandler(404)
