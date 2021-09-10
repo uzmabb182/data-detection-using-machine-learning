@@ -1,0 +1,27 @@
+{% extends "base.html" %}
+{% set active_page = "analysis" %}
+{% block content %}
+<link rel="stylesheet" href="{{url_for('static', filename='css/analysis.css')}}" />
+<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet">
+
+
+
+<div class="container">
+   <div class="row">
+      <div class="col-md-6">
+         <div style='margin-top: 40px; text-align: right;'>
+            <img src="static/images/reduced_features.PNG" alt="My Image" />
+         </div>
+      </div>
+      <div class="col-md-6">
+         <div style='margin-top: 40px; text-align: left;'>
+            <img src="static/images/arrest_reduced_feature.PNG" alt="My Image" />
+         </div>
+      </div>
+   </div>
+</div>
+
+
+<script src="{{url_for('static', filename='js/analysis.js')}}"></script>
+
+{% endblock %}
