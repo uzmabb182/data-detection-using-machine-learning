@@ -1,0 +1,8 @@
+body{
+	
+	background: linear-gradient(0deg, #1c1c1c60, #1c1c1c60), url("https://github.com/uzmabb182/outcome-prediction-using-machine-learning/blob/main/static/images/background_image.jpg?raw=true") center center no-repeat;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
