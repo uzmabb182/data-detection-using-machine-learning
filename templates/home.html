@@ -2,11 +2,14 @@
 {% set active_page = "home" %}
 {% block content %}
 
+<link rel="stylesheet" href="{{url_for('static', filename='css/home.css')}}" />
+<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet">
+
 <div style='margin-top: 30px; text-align: center;'>
   <h1>Supervised Machine Learning Model Application Using Flask</h1>
   <p class="lead"><i>By Mubashira Qari</i></p>
 </div>
-<div class="jumbotron bg-success" style="text-align: center">
+<div class="jumbotron bg-primary" style="text-align: center">
   <h1 class="text-light">Predicting the Likelihood that Someone will be Brought to Court After Being Stopped by a Police Officer</h1>
 </div>
 
