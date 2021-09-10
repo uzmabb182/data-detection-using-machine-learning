@@ -17,6 +17,12 @@ def home():
 def visual_analysis():
     return render_template('analysis.html')
 
+
+@app.route('/tableau')
+def visual_tableau():
+    return render_template('tableau.html')
+
+
 @app.route('/summon_predictions')
 def predictions():
     return render_template('summon_predictions.html')
