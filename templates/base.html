@@ -16,8 +16,9 @@
 <!-- Jinja2 stuff related to generating nav and setting active state. Add more pages here! -->
 {% set navigation_bar = [
   ('/', 'home', 'Home'),
-  ('/Supervised_Machine_Learning', 'Supervised_Machine_Learning', 'Supervised_Machine_Learning'), 
-  ('/Analysis', 'Analysis', 'Analysis')] -%}
+  ('/arrest_predictions', 'Arrest_Predictions', 'Arrest_Predictions'),
+  ('/summon_predictions', 'Summon_Predictions', 'Summon_Predictions'), 
+  ('/analysis', 'Analysis', 'Analysis')] -%}
 {% set active_page = active_page|default('home') -%}
 
 <body style='background-color: #1c1c1c;'>
