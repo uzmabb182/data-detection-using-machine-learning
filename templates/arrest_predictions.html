@@ -1,31 +1,29 @@
 {% extends "base.html" %}
-{% set active_page = "Arrest_Predictions" %}
+{% set active_page = "Arrest Prediction" %}
 {% block content %}
 
 <link rel="stylesheet" href="{{url_for('static', filename='css/predictions.css')}}" />
 
 <div class="jumbotron bg-primary" style="text-align: center">
-  <h1 id='arrest_prediction-text' class="text-light">'Arrest_Isssued' Prediction </h1>
+  <h1 id='arrest_prediction-text' class="text-light">Arrested or Set Free? </h1>
+  <h3 id='arrest_prediction-text' class="text-light">Try our arrest prediction algorithm to learn if a suspect might be arrested or set free after being stopped, questioned and frisked by a police officer in New York city.</h3>
 </div>
 
 
 <div style='margin-top: 30px; text-align: center;'>
-  <h1>Top Twelve Feature Importances</h1>
-  <h5>Enter an integer value in the boxes below for prediction</h5>
+  <h1>Arrest Prediction Assessment Questions</h1>
+  <h5>Enter an integer value in the boxes below for prediction (1=Yes, 0=No)</h5>
   <div id='user-inputs'></div>
   <div style='text-align: center; justify-content: center; margin-top: 10px;'>
 
-    <h3>Select a Model to Fit for Accuracy Score</h3>
+    <h3>Select a Model to Find an Accuracy of Prediction</h3>
 
     <div class="btn-group dropleft">
       <button type="button" class="btn btn-primary" style='width:400px;' id="dropdownMenuButton" data-toggle="dropdown"
         aria-haspopup="true" aria-expanded="false">Logestic
         Regression Model</button>
       <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-        <a class="dropdown-item" href="#">Action</a>
-        <a class="dropdown-item" href="#">Another action</a>
-        <a class="dropdown-item" href="#">Something else here</a>
-        <a class="dropdown-item" href="#">Something else here</a>
+        <a class="dropdown-item" href="#">Testing Data Score: 83%</a>
       </div>
     </div>
     <div class="btn-group dropright">
@@ -33,12 +31,7 @@
         aria-haspopup="true" aria-expanded="false">Random Forest
         Classifier</button>
       <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-        <a class="dropdown-item" href="#">Action</a>
-        <a class="dropdown-item" href="#">Another action</a>
-        <a class="dropdown-item" href="#">Something else here</a>
-        <a class="dropdown-item" href="#">Something else here</a>
-        <a class="dropdown-item" href="#">Something else here</a>
-        <a class="dropdown-item" href="#">Something else here</a>
+        <a class="dropdown-item" href="#">Testing Score: 82%</a>
       </div>
     </div>
   </div>

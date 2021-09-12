@@ -28,7 +28,7 @@ def predictions():
     return render_template('summon_predictions.html')
 
 
-@app.route('/api/generate_prediction', methods=['POST'])
+@app.route('/api/generate_summon_prediction', methods=['POST'])
 def generate_prediction():
     user_inputs=request.json
     predict_df=pd.DataFrame({
