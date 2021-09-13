@@ -1,6 +1,6 @@
 from flask import Flask, render_template, jsonify, request
-from data import reduced_column_names
-from data import arrest_reduced_column_names
+from data import reduced_column_names_and_labels
+from data import arrest_reduced_column_names_and_labels
 import joblib
 import pandas as pd
 app = Flask(__name__)
@@ -46,12 +46,14 @@ def generate_prediction():
     'STOP_LOCATION_Y':[float(user_inputs['STOP_LOCATION_Y'])]
     })
     prediction=str(trained_machine_learning_model.predict(predict_df)[0])
+    # predict_proba = trained_machine_learning_model.predict_proba(predict_df)[0]
+    # print(f'')
     return jsonify([prediction])
-
+    # return jsonify([prediction , predict_proba])
 
 @app.route('/api/feature_names')
 def feature_names():
-    return jsonify(reduced_column_names)
+    return jsonify(reduced_column_names_and_labels)
 
 @app.route('/arrest_predictions')
 def predictions_arrest():
@@ -81,7 +83,7 @@ def generate_prediction_arrest():
 
 @app.route('/api/arrest_feature_names')
 def feature_names_arrest():
-    return jsonify(arrest_reduced_column_names)
+    return jsonify(arrest_reduced_column_names_and_labels)
 
 
 @app.errorhandler(404)

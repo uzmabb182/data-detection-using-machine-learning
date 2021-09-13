@@ -5,9 +5,9 @@ fetch('/api/feature_names')
     console.log(feature_names);
     var user_input_html = ''
     feature_names.forEach(feature_name => {
-      reduced_column_names.push(feature_name)
+      reduced_column_names.push(feature_name.id)
       user_input_html += `
-        <input id = '${feature_name}' placeholder = '${feature_name}' style = 'width: 400px; text-align:center; margin-bottom:2px;'></input>
+        <input id = '${feature_name.id}' placeholder = '${feature_name.placeholder}' style = 'width: 400px; text-align:center; margin-bottom:2px;'></input>
         <br>
         `
     });
@@ -43,7 +43,8 @@ function submit_button_pressed() {
         prediction_message='Go Home'
       }
       var prediction_div = d3.select(`#prediction-text`)
-      prediction_div.text(prediction_message)
+      prediction_div.text(`${prediction_message}`)
+      // prediction_div.text(`${prediction_message} (${data[1]}% confident)`)
     })
     .catch((error) => {
       console.error('Error:', error);
