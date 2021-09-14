@@ -1,6 +1,16 @@
 # Supervised Machine Learning Model Integration Using Flask (Project-4):
-![background Image](static/images/background_image.jpg)
- 
+![background Image](static/images/website1.PNG)
+
+![background Image](static/images/Website2.PNG)
+
+![background Image](static/images/Website3.PNG)
+
+![background Image](static/images/Website4.PNG)
+
+![background Image](static/images/Website5.PNG)
+
+![background Image](static/images/Website6.PNG)
+
 ## Data Source:
 
 - Data records from the NYPD Stop, Question, and Frisk database are available for download from the links provided below. Data is made available in CSV format.
@@ -34,7 +44,7 @@ Host application using Heroku or amazon cloud for deployment
 ![EDA](static/images/EDA.PNG)
 
 ## Data Preprocessing (ETL):
-- Import our dependencies
+- Import the dependencies
 - Loading the dataset from the resources folder
 - Merging 2017,18, &19 for training data and keeping 2020 for testing
 - Removing unwanted text from columns
@@ -198,3 +208,16 @@ Host application using Heroku or amazon cloud for deployment
 
 - Target/outcome column value count should be evaluated.
 
+## Flask Application:
+
+- The model is saved using joblib and retrieved in the Flask application for the prediction on website.
+
+- The following code files are prepared for performing the process:
+
+![code files](static/images/html1.PNG)
+
+![code files](static/images/main.py.PNG)
+
+## PosgreSQL Database:
+
+- The cleaned merged training data and 2020 testing data are imported in the PosgreSQL database for further analysis.
