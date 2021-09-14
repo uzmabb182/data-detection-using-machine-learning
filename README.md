@@ -134,7 +134,7 @@ Host application using Heroku or amazon cloud for deployment
 
 - The receiver operating characteristic (ROC) curve helps us visualize this tradeoff. The false positive rate and the true positive rate are calculated for several thresholds, and we plot them against each other.
 
-## Resampling Techniques for Imbalance Data: Over-sampling: SMOTE:
+- Resampling Techniques for Imbalance Data: Over-sampling: SMOTE:
 
 ![ETL](static/images/Resampling1.PNG)
 
