@@ -218,13 +218,15 @@ Host application using Heroku or amazon cloud for deployment
 
 ![code files](static/images/main.py.PNG)
 
-## PosgreSQL Database:
+## PostgreSQL Database:
 
-- The cleaned merged training data and 2020 testing data are imported in the PosgreSQL database for further analysis.
+- The cleaned merged training data and 2020 testing data are imported in the PosgreSQL 'stop_frisk_db' database for further analysis.
+
+![code files](static/images/stop_frisk_db.PNG)
+
 
 ## Tebleau Visual Analytics:
 
 Tableau visual analysis is prepared and published using 'Tableau Public'. The visuals are also embeded in the website. Below is the link to access 'Tableau Public'.
 
-[Tableau Visuals](https://public.tableau.com/app/profile/mubashira.qari/viz/Stop_Frisk_Analysis/Story2?publish=yes)
-
+https://public.tableau.com/app/profile/mubashira.qari/viz/Citibike_Assignment_MQ/Story1-CitiBikeAnalytics?publish=yes
