@@ -93,7 +93,7 @@ Host application using Heroku or amazon cloud for deployment
 
 ![ETL](static/images/ETL15.PNG)
 
-## Now preparing to fit the models and analyze the results
+## Now preparing to fit the models and analyze the results:
 
 ![ETL](static/images/Model1.PNG)
 
@@ -152,7 +152,7 @@ Host application using Heroku or amazon cloud for deployment
 
 ![ETL](static/images/Resampling8.PNG)
 
-## Now Assigning Another outcome for Prediction: 'SUSPECT_ARRESTED_FLAG'  and repeat the all the steps
+## Now Assigning Another outcome for Prediction: 'SUSPECT_ARRESTED_FLAG'  and repeat the  steps:
 
 ![New Outcome Prediction](static/images/LR_Arrest_flag.PNG)
 
