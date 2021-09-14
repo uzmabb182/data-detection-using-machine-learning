@@ -19,3 +19,10 @@
 ### Notes
 
 * You will most likely want to use additional Python libraries to build your website. For example, you may want to import pandas or import sqlalchemy, in which case, you'll need to add those libraries to the `requirements.txt` file. To view the version numbers of each of the python libraries that are installed on your machine, simply open your terminal/gitbash and type the command `pip list`. This shows all downloaded libraries, so you'll need to copy/paste into the `requirements.txt` only the libraries needed to run your website.
+
+1. Create new project on google cloud console.
+2. Enable App Engine for this project from hambuger menu.
+2. gcloud init
+3. gcloud app deploy
+4. Follow link to activate cloud build API
+5. gcloud app deploy again 
