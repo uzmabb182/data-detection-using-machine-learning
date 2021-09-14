@@ -46,10 +46,9 @@ def generate_prediction():
     'STOP_LOCATION_Y':[float(user_inputs['STOP_LOCATION_Y'])]
     })
     prediction=str(trained_machine_learning_model.predict(predict_df)[0])
-    # predict_proba = trained_machine_learning_model.predict_proba(predict_df)[0]
-    # print(f'')
+
     return jsonify([prediction])
-    # return jsonify([prediction , predict_proba])
+   
 
 @app.route('/api/feature_names')
 def feature_names():
@@ -94,7 +93,7 @@ def page_not_found(error):
 if __name__ == '__main__':
 
     # Run this when running on LOCAL server...
-    app.run(debug=False)
+    app.run(debug=True)
 
     # ...OR run this when PRODUCTION server.
     # app.run(debug=False)

@@ -230,3 +230,4 @@ Host application using Heroku or amazon cloud for deployment
 Tableau visual analysis is prepared and published using 'Tableau Public'. The visuals are also embeded in the website. Below is the link to access 'Tableau Public'.
 
 [Tableau Visual Analysis](https://public.tableau.com/app/profile/mubashira.qari/viz/Stop_Frisk_Analysis/Story2?publish=yes)
+
