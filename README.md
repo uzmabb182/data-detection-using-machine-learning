@@ -108,28 +108,27 @@ Host application using Heroku or amazon cloud for deployment
 ## Analysis:
 
 - Actual: 0's and 1's are:[
-0    35056 
-1     1040
+- 0  -  35056 
+- 1  -   1040
 
 - Prediction:
-True negative (tn) = 9281 ;which means model is correctly predicted 9281 -- 0's
-False negative (fn) = 263 ;which means model is incorrectly predicted 0's
-True positive (tp) = 0 ; which means model is not correctly predicting 1's at all
-False positive (fp) = 0 ; which means model is not predicting 1's at all which is good in away that it is not incorrectly predicting 1's 
+- True negative (tn) = 9281 ;which means model is correctly predicted 9281 -- 0's
+- False negative (fn) = 263 ;which means model is incorrectly predicted 0's
+- True positive (tp) = 0 ; which means model is not correctly predicting 1's at all
+- False positive (fp) = 0 ; which means model is not predicting 1's at all which is good in away that it is not incorrectly predicting 1's 
 
-we want higher true positives and lower false positives
+- we want higher true positives and lower false positives
 
-array([[9281,    0],
-       [ 263,    0]]
+- array [9281,    0],
+-       [ 263,    0]
 
-Accuracy: 0.9724434199497066
+- Accuracy: 0.9724434199497066
 
-How accurate is "Accuraracy"?
+- How accurate is "Accuraracy"?
 
--- Even a model with relatively high accuracy can run into problems if used on an imbalanced data.
--- tn, fp, fn,  tp are weighted based on how the data is distributed.
--- When we look at our actual data distribution, we can clearly see that the number of 0's are way higher 
--- than 1's and we conclude that we have an imbalance dataset.
+- Even a model with relatively high accuracy can run into problems if used on an imbalanced data.
+- tn, fp, fn,  tp are weighted based on how the data is distributed.
+- When we look at our actual data distribution, we can clearly see that the number of 0's are way higher than 1's and we conclude that we have an imbalance dataset.
 
 - Instead of a pure binary output, the KNN model also has a predict_proba() method, which returns probability estimates for given input.
 
@@ -157,4 +156,45 @@ How accurate is "Accuraracy"?
 
 ![New Outcome Prediction](static/images/LR_Arrest_flag.PNG)
 
+![New Outcome Prediction](static/images/RF_Arrest_flag.PNG)
+
+![New Outcome Prediction](static/images/AddB_Arrest.PNG)
+
+## Analysis for New Outcome Prediction:
+
+- Actual: 0's and 1's are:
+- 0  -  25212
+- 1  -  10884
+- Name: SUSPECT_ARRESTED_FLAG
+
+- Prediction:
+- True negative (tn) = 5515 ;which means model is correctly predicted 9281 -- 0's
+- False negative (fn) = 1189 ;which means model is incorrectly predicted 0's
+- True positive (tp) = 2368 ; which means model is correctly predicting 2368 --1's 
+- False positive (fp) = 472 ; which means model is incorrectly predicting 472 --1's  
+
+- we want higher true positives and lower false positives
+
+- array [5515,  472],
+-     [1189, 2368]
+
+- Accuracy: 0.8259639564124057
+
+## Feature Impotances For Summons Issued Outcome:
+
+![New Outcome Prediction](static/images/Imp_feature2.PNG)
+
+## Feature Impotances For Suspect Arrest Outcome:
+
+![New Outcome Prediction](static/images/arrest_reduced_feature.PNG)
+
+## Conclusion:
+
+- In machine learning algorithm, a model which gives the best overall results with regards to the goal, should be selected.
+
+- When dealing with the imbalance data, resampling methods should be applied carefully, keeping in mind the goal to be achieved.
+
+- Feature selection should be examined carefully.
+
+- Target/outcome column value count should be evaluated.
 
