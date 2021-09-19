@@ -19,8 +19,9 @@
 
 ## Problem Worth Solving, Analyzing, and Visualizing:
 
-- ‘Stop, Question, and Frisk’ database has multiple features which are important in affecting the outcome. The aim of this machine learning project is to predict, whether the summons is issued or not for the suspect.
-- Also to find out which features, mostly contribute to the arrest of the suspect.
+1- ‘Stop, Question, and Frisk’ database has multiple features which are important in affecting the outcome. The aim of this machine learning project is to predict, whether the summons is issued or not for the suspect.
+
+2- Also to find out which features, mostly contribute to the arrest of the suspect.
 
 ## Implementation:
 
@@ -74,17 +75,7 @@ Host application using Heroku or amazon cloud for deployment
 - Binning of categories in columns is performed
 - Files are saved as a csv files for further applications of data
 
-![ETL](static/images/ETL7.PNG)
-
-![ETL](static/images/ETL8.PNG)
-
-![ETL](static/images/ETL9.PNG)
-
-![ETL](static/images/ETL10.PNG)
-
-![ETL](static/images/ETL11.PNGG)
-
-![ETL](static/images/ETL12.PNG)
+![ETL](static/images/ETL11.PNG)
 
 - Converting categorical data to numeric using Label Encoder for unhirarchial data value columns
 - Convert categorical data to numeric and separate target feature for training data using - - get_dummies encoding method for the entire dataframe
@@ -115,11 +106,11 @@ Host application using Heroku or amazon cloud for deployment
 
 ![ETL](static/images/model3a.PNG)
 
-## Analysis:
+## Analysis for Summons Predictions:
 
 - Actual: 0's and 1's are:[
-- 0  -  35056 
-- 1  -   1040
+- Summons Issued (NO)  - 0's -  35056 
+- Summons Issued (YES)  - 1's -   1040
 
 - Prediction:
 - True negative (tn) = 9281 ;which means model is correctly predicted 9281 -- 0's
@@ -170,15 +161,15 @@ Host application using Heroku or amazon cloud for deployment
 
 ![New Outcome Prediction](static/images/AddB_Arrest.PNG)
 
-## Analysis for New Outcome Prediction:
+## Analysis for Arrest Prediction:
 
 - Actual: 0's and 1's are:
-- 0  -  25212
-- 1  -  10884
+- Suspect Arrest (NO)- 0's  -  25212
+- Suspect Arrest (Yes)- 1's   -  10884
 - Name: SUSPECT_ARRESTED_FLAG
 
 - Prediction:
-- True negative (tn) = 5515 ;which means model is correctly predicted 9281 -- 0's
+- True negative (tn) = 5515 ;which means model is correctly predicted 5515 -- 0's
 - False negative (fn) = 1189 ;which means model is incorrectly predicted 0's
 - True positive (tp) = 2368 ; which means model is correctly predicting 2368 --1's 
 - False positive (fp) = 472 ; which means model is incorrectly predicting 472 --1's  
@@ -210,7 +201,7 @@ Host application using Heroku or amazon cloud for deployment
 
 ## Flask Application:
 
-- The model is saved using joblib and retrieved in the Flask application for the prediction on website.
+- The model is saved using joblib and retrieved in the Flask application for the prediction.
 
 - The following code files are prepared for performing the process:
 
@@ -231,3 +222,4 @@ Tableau visual analysis is prepared and published using 'Tableau Public'. The vi
 
 [Tableau Visual Analysis](https://public.tableau.com/app/profile/mubashira.qari/viz/Stop_Frisk_Analysis/Story2?publish=yes)
 
+[Heroku Deployment](https://ml-outcome-prediction-heroku.herokuapp.com/)
