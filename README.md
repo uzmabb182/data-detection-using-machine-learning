@@ -1,4 +1,16 @@
 # Supervised Machine Learning Model Integration Using Flask (Project-4):
+
+## Heroku Deployment:
+
+[Heroku Deployment](https://ml-outcome-prediction-heroku.herokuapp.com/)
+
+## Tebleau Visual Analytics:
+
+Tableau visual analysis is prepared and published using 'Tableau Public'. The visuals are also embeded in the website. Below is the link to access 'Tableau Public'.
+
+[Tableau Visual Analysis](https://public.tableau.com/app/profile/mubashira.qari/viz/Stop_Frisk_Analysis/Story2?publish=yes)
+
+
 ![background Image](static/images/website1.PNG)
 
 ![background Image](static/images/Website2.PNG)
@@ -214,12 +226,3 @@ Host application using Heroku or amazon cloud for deployment
 - The cleaned merged training data and 2020 testing data are imported in the PosgreSQL 'stop_frisk_db' database for further analysis.
 
 ![code files](static/images/stop_frisk_db.PNG)
-
-
-## Tebleau Visual Analytics:
-
-Tableau visual analysis is prepared and published using 'Tableau Public'. The visuals are also embeded in the website. Below is the link to access 'Tableau Public'.
-
-[Tableau Visual Analysis](https://public.tableau.com/app/profile/mubashira.qari/viz/Stop_Frisk_Analysis/Story2?publish=yes)
-
-[Heroku Deployment](https://ml-outcome-prediction-heroku.herokuapp.com/)
