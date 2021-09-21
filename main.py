@@ -12,6 +12,11 @@ trained_machine_learning_model_1=joblib.load('static/data_processing/reduced_fea
 def home():
     return render_template('home.html')
 
+@app.route('/presentation')
+def presentation_slides():
+    return render_template('presentation.html')
+
+
 
 @app.route('/analysis')
 def visual_analysis():
@@ -31,6 +36,10 @@ def predictions():
 @app.route('/api/generate_summon_prediction', methods=['POST'])
 def generate_prediction():
     user_inputs=request.json
+    list_time=user_inputs['SECONDS'].split(":")
+    num_hours=int(list_time[0])
+    num_minutes=int(list_time[1])
+    num_seconds= ((num_hours*60)+(num_minutes))*60
     predict_df=pd.DataFrame({
     'SUSPECT_ARRESTED_FLAG':[int(user_inputs['SUSPECT_ARRESTED_FLAG'])],
     'YEAR':[int(user_inputs['YEAR'])],
@@ -41,7 +50,7 @@ def generate_prediction():
     'SUSPECT_HEIGHT':[int(user_inputs['SUSPECT_HEIGHT'])],
     'SUSPECT_WEIGHT':[int(user_inputs['SUSPECT_WEIGHT'])],
     'SUSPECT_REPORTED_AGE':[int(user_inputs['SUSPECT_REPORTED_AGE'])],
-    'SECONDS':[int(user_inputs['SECONDS'])],
+    'SECONDS':[num_seconds],
     'STOP_LOCATION_X':[float(user_inputs['STOP_LOCATION_X'])],
     'STOP_LOCATION_Y':[float(user_inputs['STOP_LOCATION_Y'])]
     })
